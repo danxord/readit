@@ -1,4 +1,4 @@
-module.exports = [
+export const seedPosts = [
   {
     title: 'Climate Change Will Be A Lot More Explosive Than We Thought',
     description: 'A recent study uncovered something terrifying.',

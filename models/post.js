@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
@@ -11,4 +11,4 @@ const PostSchema = new Schema({
   downs: { type: Number, default: 0 },
 });
 
-module.exports = mongoose.model('Post', PostSchema);
+export const Post = mongoose.model('Post', PostSchema);

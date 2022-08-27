@@ -1,8 +1,7 @@
-const express = require('express');
-const path = require('path');
-const mongoose = require('mongoose');
-const methodOverride = require('method-override');
-const Post = require('./models/post');
+import express from 'express';
+import mongoose from 'mongoose';
+import methodOverride from 'method-override';
+import { Post } from './models/post.js';
 
 mongoose.connect('mongodb://localhost:27017/readit', {
   useNewUrlParser: true,
@@ -14,11 +13,11 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
   console.log('Database connected');
 });
-
+const __dirname = new URL('.', import.meta.url).pathname.slice(1);
 const app = express();
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', `${__dirname}views`);
 
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));

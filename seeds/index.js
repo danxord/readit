@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
-const seedPosts = require('./seedPosts');
-const Post = require('../models/post');
+import mongoose from 'mongoose';
+import { seedPosts } from './seedPosts.js';
+import { Post } from '../models/post.js';
 
 mongoose.connect('mongodb://localhost:27017/readit', {
   useNewUrlParser: true,
