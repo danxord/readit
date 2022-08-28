@@ -19,7 +19,6 @@ const seedDB = async () => {
     const post = new Post({
       title: `${seedPosts[i].title}`,
       description: `${seedPosts[i].description}`,
-      date: `${seedPosts[i].date}`,
       author: `${seedPosts[i].author}`,
       ups: `${seedPosts[i].ups}`,
       downs: `${seedPosts[i].downs}`,
