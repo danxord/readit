@@ -23,16 +23,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
 app.get('/', (req, res) => {
-  res.render('home');
+  res.render('home', { title: 'Home page' });
 });
 
 app.get('/posts', async (req, res) => {
   const posts = await Post.find({});
-  res.render('posts/index', { posts });
+  res.render('posts/index', { posts, title: 'Posts' });
 });
 
 app.get('/posts/new', (req, res) => {
-  res.render('posts/new');
+  res.render('posts/new', { title: 'Create a post' });
 });
 
 app.post('/posts', async (req, res) => {
@@ -43,12 +43,12 @@ app.post('/posts', async (req, res) => {
 
 app.get('/posts/:id', async (req, res) => {
   const post = await Post.findById(req.params.id);
-  res.render('posts/show', { post });
+  res.render('posts/show', { post, title: post.title });
 });
 
 app.get('/posts/:id/edit', async (req, res) => {
   const post = await Post.findById(req.params.id);
-  res.render('posts/edit', { post });
+  res.render('posts/edit', { post, title: 'Edit post' });
 });
 
 app.put('/posts/:id', async (req, res) => {
@@ -61,6 +61,10 @@ app.put('/posts/:id', async (req, res) => {
 app.delete('/posts/:id', async (req, res) => {
   await Post.findByIdAndDelete(req.params.id);
   res.redirect('/posts');
+});
+
+app.use((req, res) => {
+  res.status(404).send('Page not found');
 });
 
 app.listen(3000, () => {

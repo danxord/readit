@@ -15,7 +15,7 @@
         "no-console": "off",
 	"no-plusplus": "off",
 	"no-await-in-loop": "off",
-	"no-underscore-dangle": "off",
+	"no-underscore-dangle": [2, { "allow": ["__filename", "__dirname", "_id"] }],
 	"import/extensions": "off",
 	"import/prefer-default-export": "off"
     }
