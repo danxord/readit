@@ -19,6 +19,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', `${__dirname}views`);
 
+app.use(express.static(`${__dirname}public`));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
@@ -69,4 +70,8 @@ app.use((req, res) => {
 
 app.listen(3000, () => {
   console.log('Serving on port 3000');
+  // express слушает запросы, как в mongodb mongod слушает запросы к базе данных и обрабатывает их
+  // mongodb слушает и обрабатывает запросы после выполнения команды mongod в терминале,
+  // а express слушает и обрабатывает запросы после запуска скрипта через node app.js в терминале
+  // и будет слушать пока принудительно не закончить выполнение скрипта через ctrl+c, как и mongod
 });
