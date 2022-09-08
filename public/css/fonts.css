@@ -137,38 +137,4 @@
   src: local("Gilroy Thin Italic"), local("Gilroy-ThinItalic"), url("../fonts/Gilroy/Gilroy-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy/Gilroy-ThinItalic.woff2") format("woff2"), url("../fonts/Gilroy/Gilroy-ThinItalic.woff") format("woff"), url("../fonts/Gilroy/Gilroy-ThinItalic.ttf") format("truetype");
   font-weight: 100;
   font-style: italic;
-}
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-}
-
-body {
-  font-family: "Gilroy", sans-serif;
-}
-
-/*--------------*/
-.container {
-  max-width: 1140px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.red {
-  background-color: orange;
-  width: 31.25rem;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=fonts.css.map */

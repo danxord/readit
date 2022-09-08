@@ -2,7 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import methodOverride from 'method-override';
 import livereload from 'livereload';
-import connectLivereload from 'connect-livereload';
+import connectLiveReload from 'connect-livereload';
 import { Post } from './models/post.js';
 
 mongoose.connect('mongodb://localhost:27017/readit', {
@@ -19,7 +19,7 @@ db.once('open', () => {
 const __dirname = new URL('.', import.meta.url).pathname.slice(1);
 
 const liveReloadServer = livereload.createServer();
-liveReloadServer.watch([`${__dirname}public`, `${__dirname}views`]);
+liveReloadServer.watch(`${__dirname}public`);
 liveReloadServer.server.once('connection', () => {
   setTimeout(() => {
     liveReloadServer.refresh('/');
@@ -28,7 +28,7 @@ liveReloadServer.server.once('connection', () => {
 
 const app = express();
 
-app.use(connectLivereload());
+app.use(connectLiveReload());
 
 app.set('view engine', 'ejs');
 app.set('views', `${__dirname}views`);
