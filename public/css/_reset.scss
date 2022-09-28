@@ -1,0 +1,64 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: "Gilroy", sans-serif;
+	color: #222222;
+	background-color: #e9eff4;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+button {
+	border: none;
+}
+
+input {
+	outline: none; // черная обводка при фокусе на input
+	border: none;
+}
+
+textarea {
+	resize: none;
+	margin: 0;
+	padding: 12px 12px; // отступ внутри поля textarea до текста
+	overflow-y: auto; //показать скроллбар при переполнении контентом
+	display: block;
+	// vertical-align: top; аналог display: block; чтобы убрать нижний отступ в 5px от textarea
+	outline: none; // черная обводка при фокусе на textarea
+	border: none;
+	background-color: transparent;
+}

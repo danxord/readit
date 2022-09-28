@@ -1,0 +1,6 @@
+.posts__list {
+  display: grid;
+  grid-template-columns: repeat(4, 240px);
+  grid-auto-rows: 240px;
+  gap: 70px;
+}/*# sourceMappingURL=index.css.map */

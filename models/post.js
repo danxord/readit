@@ -8,8 +8,7 @@ const PostSchema = new Schema({
   date: { type: String, default: Date.now },
   imageSrc: { type: String, default: '' },
   author: String,
-  ups: { type: Number, default: 0 },
-  downs: { type: Number, default: 0 },
+  rating: { type: Number, default: 0 },
 });
 
 export const Post = mongoose.model('Post', PostSchema);

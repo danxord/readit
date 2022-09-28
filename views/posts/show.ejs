@@ -1,13 +1,13 @@
 <%- include('../partials/head') %>
-  <h1><%= post.title %></h1>
-  <h2><%= post.description %></h2>
-  <h3><%= post.date %></h3>
-  <h3><%= post.author %></h3>
-  <h3><%= post.ups %></h3>
-  <h3><%= post.downs %></h3>
-  <a href="/posts/<%=post._id%>/edit">Edit post</a>
-  <form action="/posts/<%=post._id%>?_method=DELETE" method="POST">
+<h3><%= post.author %></h3>
+<h3><%= post.date %></h3>
+<h1><%= post.title %></h1>
+<h2><%= post.description %></h2>
+<img src="<%= post.imageSrc %>" alt="">
+<h3><%= post.rating %></h3>
+<a href="/posts/<%=post._id%>/edit">Edit post</a>
+<form action="/posts/<%=post._id%>?_method=DELETE" method="POST">
   <button>Delete post</button>
 </form>
-  <a href="/posts">All posts</a>
-  <%- include('../partials/footer') %>
+<a href="/posts">All posts</a>
+<%- include('../partials/footer') %>

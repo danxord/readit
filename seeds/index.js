@@ -20,8 +20,8 @@ const seedDB = async () => {
       title: `${seedPosts[i].title}`,
       description: `${seedPosts[i].description}`,
       author: `${seedPosts[i].author}`,
-      ups: `${seedPosts[i].ups}`,
-      downs: `${seedPosts[i].downs}`,
+      imageSrc: `${seedPosts[i].imageSrc}`,
+      rating: `${seedPosts[i].rating}`,
     });
     await post.save();
   }

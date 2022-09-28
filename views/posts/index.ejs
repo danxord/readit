@@ -1,15 +1,28 @@
 <%- include('../partials/head') %>
-<h1>All Posts</h1>
-<a href="/posts/new">Create post</a>
-<ul class="red">
-  <% for (let post of posts){%>
-<li><a href="/posts/<%= post._id %>"><%= post.title %></a></li>
-<li><%= post.description %></li>
-<li><%= post.date %></li>
-<li><%= post.author %></li>
-<li><%= post.ups %></li>
-<li><%= post.downs %></li>
-<br>
-    <% }%>
-</ul>
+<main>
+  <div class="container">
+    <div class="index-content">
+      <div class="posts">
+        <% for (let post of posts){%>
+        <div class="posts__item">
+          <p><%= post.author %></p>
+          <p><%= post.date %></p>
+          <h2><a href="/posts/<%= post._id %>"><%= post.title %></a></h2>
+          <p><%= post.description %></p>
+          <img src="<%= post.imageSrc %>" alt="">
+          <p><%= post.rating %></p>
+        </div>
+        <% }%>
+      </div>
+      <div class="footer">
+        <ul>
+          <li> <a href="">Best</a></li>
+          <li> <a href="">New</a></li>
+          <li> <a href="">Subscribed</a></li>
+          <li> <a href="">Communities</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
 <%- include('../partials/footer') %>
