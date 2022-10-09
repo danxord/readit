@@ -1,13 +1,44 @@
 <%- include('../partials/head') %>
-<h3><%= post.author %></h3>
-<h3><%= post.date %></h3>
-<h1><%= post.title %></h1>
-<h2><%= post.description %></h2>
-<img src="<%= post.imageSrc %>" alt="">
-<h3><%= post.rating %></h3>
-<a href="/posts/<%=post._id%>/edit">Edit post</a>
-<form action="/posts/<%=post._id%>?_method=DELETE" method="POST">
-  <button>Delete post</button>
-</form>
-<a href="/posts">All posts</a>
+<div class="container">
+  <div class="btn-back">
+    <a href="/posts">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="#222222" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M10.9393 11.8889L15.8893 16.8389L14.4753 18.2529L8.11133 11.8889L14.4753 5.52493L15.8893 6.93893L10.9393 11.8889Z" />
+      </svg>
+      Back to feed</a>
+  </div>
+  <div class="post-content-grid">
+    <main>
+      <article class="post-content">
+        <span class="post-content__author"><%= post.author %></span>
+        <span class="post-content__date"><%= post.date %></span>
+        <h1 class="post-content__title"><%= post.title %></h1>
+        <p class="post-content__description"><%= post.description %></p>
+        <a href="<%= post.imageSrc %>"><img class="post-content__image" src="<%= post.imageSrc %>" alt="post-image">
+          <!-- <img class="post-content__image-blur" src="<%= post.imageSrc %>" alt="post-image"> -->
+        </a>
+        <div class="post-content__rating">
+          <span><%= post.rating %></span>
+        </div>
+        <div class="post-content__btns">
+          <form class="post-content__form-delete" action="/posts/<%=post._id%>?_method=DELETE" method="POST">
+            <button class="post-content__btn-delete btn-secondary">Delete post</button>
+          </form>
+          <a class="post-content__btn-edit btn-accent" href="/posts/<%=post._id%>/edit">Edit post</a>
+        </div>
+      </article>
+    </main>
+    <aside class="new-post-rules">
+      <img src="/svg/rules.svg" alt="readit logo">
+      <ol class="new-post-rules__list">
+        <li class="new-post-rules__list-item">Remember the human</li>
+        <li class="new-post-rules__list-item">Behave like you would in real life</li>
+        <li class="new-post-rules__list-item">Look for the original source of content</li>
+        <li class="new-post-rules__list-item">Search for duplicates before posting</li>
+        <li class="new-post-rules__list-item">Read the community's rules</li>
+      </ol>
+    </aside>
+  </div>
+</div>
 <%- include('../partials/footer') %>

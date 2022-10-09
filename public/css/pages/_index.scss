@@ -1,24 +1,23 @@
-@use "../variables" as *;
-.index-content {
+@use "../utils/functions" as *;
+@use "../utils/variables" as *;
+
+.index-grid {
   display: grid;
   grid-template-columns: 808px 256px;
   gap: 20px;
   align-items: start;
 }
 
-.posts__item {
+.post {
   background-color: $white;
   padding: 24px;
   border-radius: 8px;
   &:not(:last-child) {
     margin-bottom: 16px;
   }
-}
-
-.footer {
-  background-color: $white;
-  position: sticky;
-  top: 5rem;
-  padding: 24px;
-  border-radius: 8px;
+  &__img {
+    display: block;
+    margin: rem(16) auto;
+    max-height: rem(548);
+  }
 }

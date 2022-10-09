@@ -1,0 +1,71 @@
+@use "../utils/functions" as *;
+@use "../utils/variables" as *;
+
+.btn-accent {
+  text-align: center;
+  padding: 12px 0;
+  background-color: $accent;
+  color: $white;
+  cursor: pointer;
+  height: 48px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0px 16px 40px 0px $accent-shadow;
+  &:hover {
+    background-color: $accent-hover;
+  }
+  &:active {
+    background-color: $accent-active;
+    box-shadow: none;
+  }
+}
+
+.btn-secondary {
+  background-color: rgba(75, 126, 255, 0.15);
+  color: $accent;
+  cursor: pointer;
+  padding: 12px 0;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    box-shadow: 0 0 0 2px $accent;
+  }
+  &:active {
+    box-shadow: none;
+    background-color: $accent-active;
+    color: $white;
+  }
+}
+
+.btn-back {
+  display: inline-flex;
+  margin-bottom: rem(16);
+  font-weight: 600;
+  & a {
+    display: inline-flex;
+    align-items: center;
+  }
+  & a,
+  svg {
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+  }
+  &:hover a {
+    color: $accent-hover;
+  }
+  &:active a {
+    color: $accent-active;
+  }
+  &:hover svg {
+    fill: $accent-hover;
+  }
+  &:active svg {
+    fill: $accent-active;
+  }
+}

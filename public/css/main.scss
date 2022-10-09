@@ -1,0 +1,14 @@
+@use "base/normalize";
+@use "base/reset";
+@use "base/fonts";
+@use "utils/variables" as *;
+@use "utils/functions" as *;
+@use "utils/mixins";
+@use "base/base";
+@use "components/buttons";
+@use "partials/header";
+@use "partials/footer";
+@use "pages/index";
+@use "pages/show";
+@use "pages/new";
+@use "pages/edit";

@@ -1,44 +1,47 @@
 <%- include('../partials/head') %>
 <div class="container">
-  <div class="back-link">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="#222222" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M10.9393 11.8889L15.8893 16.8389L14.4753 18.2529L8.11133 11.8889L14.4753 5.52493L15.8893 6.93893L10.9393 11.8889Z" />
-    </svg>
-    <a href="/posts">Back to posts</a>
+  <div class="btn-back">
+    <a href="/posts">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="#222222" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M10.9393 11.8889L15.8893 16.8389L14.4753 18.2529L8.11133 11.8889L14.4753 5.52493L15.8893 6.93893L10.9393 11.8889Z" />
+      </svg>
+      Back to feed</a>
   </div>
-  <div class="new-post-content">
-    <form class="new-post-form" action="/posts" method="POST">
-      <h1>Create a post</h1>
-      <ul class="new-post-form__items">
-        <li class="new-post-form__item">
-          <label class="new-form-label" for="title">Title</label>
-          <input class="new-form-control" type="text" id="title" name="post[title]">
-          <!-- post[title] - объединяет инфо в req.body в формате: {"post":{"title":"re3443","description":"42"}}, вместо: {"title":"re3443","description":"42"}} -->
-        </li>
-        <li class="new-post-form__item">
-          <label class="new-form-label" for="description">Description</label>
-          <textarea class="new-form-control" type="text" id="description" name="post[description]"></textarea>
-        </li>
-        <li class="new-post-form__item">
-          <label class="new-form-label" for="image">Image Url</label>
-          <input class="new-form-control" type="text" id="image" name="post[imageSrc]">
-        </li>
-        <li class="new-post-form__item">
-          <button class="btn btn-accent">Create post</button>
-        </li>
-      </ul>
-    </form>
-    <div class="new-post-rules">
+  <div class="new-post-grid">
+    <main>
+      <form class="new-post-form" action="/posts" method="POST">
+        <h1>Create a post</h1>
+        <ul class="new-post-form__list">
+          <li class="new-post-form__list-item">
+            <label class="new-form-label" for="title">Title</label>
+            <input class="new-form-control" type="text" id="title" name="post[title]">
+            <!-- post[title] - объединяет инфо в req.body в формате: {"post":{"title":"re3443","description":"42"}}, вместо: {"title":"re3443","description":"42"}} -->
+          </li>
+          <li class="new-post-form__list-item">
+            <label class="new-form-label" for="description">Description</label>
+            <textarea class="new-form-control" type="text" id="description" name="post[description]"></textarea>
+          </li>
+          <li class="new-post-form__list-item">
+            <label class="new-form-label" for="imageSrc">Image URL</label>
+            <input class="new-form-control" type="text" id="imageSrc" name="post[imageSrc]">
+          </li>
+          <li class="new-post-form__list-item">
+            <button class="new-post-form__btn-success btn-accent">Create post</button>
+          </li>
+        </ul>
+      </form>
+    </main>
+    <aside class="new-post-rules">
       <img src="/svg/rules.svg" alt="readit logo">
-      <ul class="new-post-rules__items">
-        <li class="new-post-rules__item">1. Remember the human</li>
-        <li class="new-post-rules__item">2. Behave like you would in real life</li>
-        <li class="new-post-rules__item">3. Look for the original source of content</li>
-        <li class="new-post-rules__item">4. Search for duplicates before posting</li>
-        <li class="new-post-rules__item">5. Read the community's rules</li>
-      </ul>
-    </div>
+      <ol class="new-post-rules__list">
+        <li class="new-post-rules__list-item">Remember the human</li>
+        <li class="new-post-rules__list-item">Behave like you would in real life</li>
+        <li class="new-post-rules__list-item">Look for the original source of content</li>
+        <li class="new-post-rules__list-item">Search for duplicates before posting</li>
+        <li class="new-post-rules__list-item">Read the community's rules</li>
+      </ol>
+    </aside>
   </div>
 </div>
 <%- include('../partials/footer') %>

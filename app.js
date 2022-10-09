@@ -3,6 +3,8 @@ import mongoose from 'mongoose';
 import methodOverride from 'method-override';
 import livereload from 'livereload';
 import connectLiveReload from 'connect-livereload';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 import { Post } from './models/post.js';
 
 mongoose.connect('mongodb://localhost:27017/readit', {
@@ -16,10 +18,10 @@ db.once('open', () => {
   console.log('Database connected');
 });
 
-const __dirname = new URL('.', import.meta.url).pathname.slice(1);
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const liveReloadServer = livereload.createServer();
-liveReloadServer.watch(`${__dirname}public`);
+liveReloadServer.watch(`${__dirname}/public`);
 liveReloadServer.server.once('connection', () => {
   setTimeout(() => {
     liveReloadServer.refresh('/');
@@ -31,14 +33,14 @@ const app = express();
 app.use(connectLiveReload());
 
 app.set('view engine', 'ejs');
-app.set('views', `${__dirname}views`);
+app.set('views', `${__dirname}/views`);
 
-app.use(express.static(`${__dirname}public`));
+app.use(express.static(`${__dirname}/public`));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
 app.get('/', (req, res) => {
-  res.render('home', { title: 'Home page' });
+  res.render('index', { title: 'Home page' });
 });
 
 app.get('/posts', async (req, res) => {

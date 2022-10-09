@@ -1,17 +1,49 @@
 <%- include('../partials/head') %>
-<h1>Edit post</h1>
-<form action="/posts/<%=post._id%>?_method=PUT" method="POST">
-  <div>
-    <label for="title">Title</label>
-    <input type="text" id="title" name="post[title]" value="<%=post.title%>">
-    <!-- post[title] - объединяет инфо в req.body в формате: {"post":{"title":"re3443","description":"42"}}, вместо: {"title":"re3443","description":"42"}} -->
+<div class="container">
+  <div class="btn-back">
+    <a href="/posts">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="#222222" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M10.9393 11.8889L15.8893 16.8389L14.4753 18.2529L8.11133 11.8889L14.4753 5.52493L15.8893 6.93893L10.9393 11.8889Z" />
+      </svg>
+      Back to feed</a>
   </div>
-  <div>
-    <label for="description">Description</label>
-    <input type="text" id="description" name="post[description]" value="<%=post.description%>">
+  <div class="edit-post-grid">
+    <main>
+      <form class="edit-post-form" action="/posts/<%=post._id%>?_method=PUT" method="POST">
+        <h1>Edit post</h1>
+        <ul class="edit-post-form__list">
+          <li class="edit-post-form__list-item">
+            <label class="edit-form-label" for="title">Title</label>
+            <input class="edit-form-control" type="text" id="title" name="post[title]" value="<%=post.title%>">
+            <!-- post[title] - объединяет инфо в req.body в формате: {"post":{"title":"re3443","description":"42"}}, вместо: {"title":"re3443","description":"42"}} -->
+          </li>
+          <li class="edit-post-form__list-item">
+            <label class="edit-form-label" for="description">Description</label>
+            <textarea class="edit-form-control" type="text" id="description"
+              name="post[description]"><%=post.description%></textarea>
+          </li>
+          <li class="edit-post-form__list-item">
+            <label class="edit-form-label" for="imageSrc">Image URL</label>
+            <input class="edit-form-control" type="text" id="imageSrc" name="post[imageSrc]" value="<%=post.imageSrc%>">
+          </li>
+          <li class="edit-post-form__list-item edit-post-form__btns">
+            <a class="edit-post-form__btn-cancel btn-secondary" href="/posts/<%= post._id %> ">Cancel</a>
+            <button class="edit-post-form__btn-success btn-accent">Update post</button>
+          </li>
+        </ul>
+      </form>
+    </main>
+    <aside class="edit-post-rules">
+      <img src="/svg/rules.svg" alt="readit logo">
+      <ol class="edit-post-rules__list">
+        <li class="edit-post-rules__list-item">Remember the human</li>
+        <li class="edit-post-rules__list-item">Behave like you would in real life</li>
+        <li class="edit-post-rules__list-item">Look for the original source of content</li>
+        <li class="edit-post-rules__list-item">Search for duplicates before posting</li>
+        <li class="edit-post-rules__list-item">Read the community's rules</li>
+      </ol>
+    </aside>
   </div>
-  <button>Update post</button>
-</form>
-<a href="/posts/<%= post._id %> ">Back</a>
-<a href="/posts">All posts</a>
+</div>
 <%- include('../partials/footer') %>
