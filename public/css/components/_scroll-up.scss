@@ -1,0 +1,41 @@
+@use "../utils/functions" as *;
+@use "../utils/variables" as *;
+
+.scroll-up {
+  position: fixed;
+  z-index: 1000;
+  bottom: 48px;
+  right: 48px;
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $white;
+  cursor: pointer;
+  transition: 0.2s;
+  transform: translateY(25px);
+  visibility: hidden;
+  opacity: 0;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  & svg {
+    transition: 0.2s;
+  }
+  &:hover {
+    background-color: $accent-hover;
+  }
+  &:hover svg {
+    fill: $white;
+  }
+}
+
+.scroll-up_active {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+}

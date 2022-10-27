@@ -4,9 +4,12 @@
 @use "utils/variables" as *;
 @use "utils/functions" as *;
 @use "utils/mixins";
+@use "base/themes";
 @use "base/base";
+@use "components/scroll-up";
 @use "components/buttons";
-@use "partials/header";
+@use "components/theme-switcher";
+@use "partials/head";
 @use "partials/footer";
 @use "pages/index";
 @use "pages/show";

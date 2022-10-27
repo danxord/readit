@@ -40,6 +40,24 @@
   }
 }
 
+.btn-tertiary {
+  display: flex;
+  align-items: center;
+  background: none;
+  color: $black;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    background-color: $background;
+  }
+  &:active {
+    background-color: rgba(75, 126, 255, 0.15);
+  }
+}
+
 .btn-back {
   display: inline-flex;
   margin-bottom: rem(16);

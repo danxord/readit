@@ -12,8 +12,8 @@
     <main>
       <article class="post-content">
         <span class="post-content__author"><%= post.author %></span>
-        <span class="post-content__date"><%= post.date %></span>
-        <h1 class="post-content__title"><%= post.title %></h1>
+        <time class="post-content__date"><%= post.date %></time>
+        <h2 class="post-content__title"><%= post.title %></h2>
         <p class="post-content__description"><%= post.description %></p>
         <a href="<%= post.imageSrc %>"><img class="post-content__image" src="<%= post.imageSrc %>" alt="post-image">
           <!-- <img class="post-content__image-blur" src="<%= post.imageSrc %>" alt="post-image"> -->
@@ -41,4 +41,5 @@
     </aside>
   </div>
 </div>
+<%- include('../components/scroll-up') %>
 <%- include('../partials/footer') %>

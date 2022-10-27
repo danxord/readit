@@ -17,6 +17,7 @@
 	"no-await-in-loop": "off",
 	"no-underscore-dangle": [2, { "allow": ["__filename", "__dirname", "_id"] }],
 	"import/extensions": "off",
-	"import/prefer-default-export": "off"
+	"import/prefer-default-export": "off",
+	"func-names": ["error", "as-needed"]
     }
 }

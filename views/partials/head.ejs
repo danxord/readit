@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme-os">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="readit is a social media of new a generation">
+  <meta name="keywords" content="social, media, social media, read, funny">
+  <meta name="Author" content="Daniil Sukhomlin">
+  <meta name="Copyright" content="Daniil Sukhomlin">
   <link rel="stylesheet" type="text/css" href="/css/main.css" />
   <title><%= title %></title>
 </head>
@@ -13,7 +18,26 @@
   <header>
     <div class="container">
       <div class="header-content">
-        <a href="/posts"><img src="/svg/readit-logo.svg" alt="readit logo"></a>
+        <div class="logo-theme-wrapper">
+          <a href="/posts"><img src="/svg/readit-logo.svg" alt="readit logo"></a>
+          <div class="theme-switcher">
+            <button aria-haspopup="menu"
+              class="theme-switcher__btn btn-tertiary theme-switcher__main-btn theme-os-icon">
+              Theme
+            </button>
+            <ul class="theme-switcher__menu">
+              <li class="theme-switcher__menu-item">
+                <button class=" theme-switcher__btn btn-tertiary switcher-os theme-os-icon">OS Default</button>
+              </li>
+              <li class="theme-switcher__menu-item">
+                <button class="theme-switcher__btn btn-tertiary switcher-light theme-light-icon">Light</button>
+              </li>
+              <li class="theme-switcher__menu-item">
+                <button class="theme-switcher__btn btn-tertiary switcher-dark theme-dark-icon">Dark</button>
+              </li>
+            </ul>
+          </div>
+        </div>
         <nav class="header-navigation">
           <a href="#">Best</a>
           <a href="#">New</a>

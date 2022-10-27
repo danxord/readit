@@ -6,7 +6,7 @@
         <% for (let post of posts){%>
         <article class="post">
           <span><%= post.author %></span>
-          <span><%= post.date %></span>
+          <time><%= post.date %></time>
           <h2 class="post__title"><a href="/posts/<%= post._id %>"><%= post.title %></a></h2>
           <p class="post__description"><%= post.description %></p>
           <img class="post__img" src="<%= post.imageSrc %>" alt="">
@@ -25,4 +25,5 @@
     </footer>
   </div>
 </div>
+<%- include('../components/scroll-up') %>
 <%- include('../partials/footer') %>

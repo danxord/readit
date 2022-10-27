@@ -9,7 +9,7 @@
 }
 
 .post {
-  background-color: $white;
+  background-color: var(--bg-secondary);
   padding: 24px;
   border-radius: 8px;
   &:not(:last-child) {

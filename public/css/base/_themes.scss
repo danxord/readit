@@ -1,3 +1,6 @@
+@use "../utils/functions" as *;
+@use "../utils/variables" as *;
+
 $black: #222222;
 $white: #ffffff;
 $background: #e9eff4;
@@ -8,16 +11,69 @@ $accent-hover: #62a1ff;
 $accent-active: #2d60e3;
 $accent-shadow: #4b7eff66;
 
-:root {
-  --black: #{$black};
-  --white: #{$white};
-  --background: #{$background};
-  --gray-lines: #{$gray-lines};
-  --gray-text: #{$gray-text};
-  --accent: #{$accent};
-  --accent-hover: #{$accent-hover};
-  --accent-active: #{$accent-active};
-  --accent-shadow: #{$accent-shadow};
+// :root {
+//   --black: #{$black};
+//   --white: #{$white};
+//   --background: #{$background};
+//   --gray-lines: #{$gray-lines};
+//   --gray-text: #{$gray-text};
+//   --accent: #{$accent};
+//   --accent-hover: #{$accent-hover};
+//   --accent-active: #{$accent-active};
+//   --accent-shadow: #{$accent-shadow};
+// }
+
+:root:not(.theme-light):not(.theme-dark) {
+  @media (prefers-color-scheme: light) {
+    --bg-primary: #e9eff4;
+    --bg-secondary: #ffffff;
+    --text-primary: #222222;
+    --text-secondary: #969696;
+    --text-btn: #ffffff;
+    --stroke: #e7e7e7;
+    --accent: #4b7eff;
+    --accent-hover: #62a1ff;
+    --accent-active: #2d60e3;
+    --accent-shadow: #4b7eff66;
+  }
+  @media (prefers-color-scheme: dark) {
+    --bg-primary: #222222;
+    --bg-secondary: #34383b;
+    --text-primary: #ffffff;
+    --text-secondary: #969696;
+    --text-btn: #ffffff;
+    --stroke: #535050;
+    --accent: #4b7eff;
+    --accent-hover: #62a1ff;
+    --accent-active: #2d60e3;
+    --accent-shadow: #4b7eff66;
+  }
+}
+
+html.theme-light {
+  --bg-primary: #e9eff4;
+  --bg-secondary: #ffffff;
+  --text-primary: #222222;
+  --text-secondary: #969696;
+  --text-btn: #ffffff;
+  --stroke: #e7e7e7;
+  --accent: #4b7eff;
+  --accent-hover: #62a1ff;
+  --accent-active: #2d60e3;
+  --accent-shadow: #4b7eff66;
+}
+
+html.theme-dark {
+  --bg-primary: #222222;
+  --bg-secondary: #34383b;
+  --text-primary: #ffffff;
+  --text-secondary: #969696;
+  --text-btn: #ffffff;
+  --stroke: #535050;
+  --accent: #4b7eff;
+  --accent-hover: #62a1ff;
+  --accent-active: #2d60e3;
+  --accent-shadow: #4b7eff66;
 }
 
 // :root[theme='dark']{

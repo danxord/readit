@@ -44,7 +44,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/posts', async (req, res) => {
-  const posts = await Post.find({});
+  const posts = await Post.find({}).sort({ _id: -1 });
   res.render('posts/index', { posts, title: 'Posts' });
 });
 
