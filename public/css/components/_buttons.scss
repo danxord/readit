@@ -4,26 +4,26 @@
 .btn-accent {
   text-align: center;
   padding: 12px 0;
-  background-color: $accent;
-  color: $white;
+  background-color: var(--accent);
+  color: var(--text-btn);
   cursor: pointer;
   height: 48px;
   font-weight: 600;
   border-radius: 4px;
   transition: all 0.5s ease-in-out;
-  box-shadow: 0px 16px 40px 0px $accent-shadow;
+  box-shadow: 0px 16px 40px 0px var(--accent-shadow);
   &:hover {
-    background-color: $accent-hover;
+    background-color: var(--accent-hover);
   }
   &:active {
-    background-color: $accent-active;
+    background-color: var(--accent-active);
     box-shadow: none;
   }
 }
 
 .btn-secondary {
   background-color: rgba(75, 126, 255, 0.15);
-  color: $accent;
+  color: var(--accent);
   cursor: pointer;
   padding: 12px 0;
   text-align: center;
@@ -31,12 +31,12 @@
   border-radius: 4px;
   transition: all 0.5s ease-in-out;
   &:hover {
-    box-shadow: 0 0 0 2px $accent;
+    box-shadow: 0 0 0 2px var(--accent);
   }
   &:active {
     box-shadow: none;
-    background-color: $accent-active;
-    color: $white;
+    background-color: var(--accent-active);
+    color: var(--text-btn);
   }
 }
 
@@ -51,7 +51,7 @@
   border-radius: 4px;
   transition: all 0.5s ease-in-out;
   &:hover {
-    background-color: $background;
+    background-color: var(--bg-primary);
   }
   &:active {
     background-color: rgba(75, 126, 255, 0.15);
@@ -66,6 +66,9 @@
     display: inline-flex;
     align-items: center;
   }
+  & svg {
+    fill: var(--icon-primary);
+  }
   & a,
   svg {
     transition: all 0.3s ease-in-out;
@@ -75,15 +78,15 @@
     -o-transition: all 0.3s ease-in-out;
   }
   &:hover a {
-    color: $accent-hover;
+    color: var(--accent-hover);
   }
   &:active a {
-    color: $accent-active;
+    color: var(--accent-active);
   }
   &:hover svg {
-    fill: $accent-hover;
+    fill: var(--accent-hover);
   }
   &:active svg {
-    fill: $accent-active;
+    fill: var(--accent-active);
   }
 }

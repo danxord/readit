@@ -1,22 +1,22 @@
 @use "../utils/functions" as *;
 @use "../utils/variables" as *;
 
-header {
+.header {
   position: sticky;
   top: 0;
   margin-bottom: rem(16);
-  background-color: $white;
-  border-bottom: rem(1) solid $gray-lines;
+  background-color: var(--bg-secondary);
+  border-bottom: rem(1) solid var(--stroke);
 }
 
-.header-content {
+.header__content {
   height: rem(56);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.header-navigation {
+.header__navigation {
   display: flex;
   justify-content: space-between;
   font-weight: 600;
@@ -24,4 +24,3 @@ header {
     padding-right: 24px;
   }
 }
-

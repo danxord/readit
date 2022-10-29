@@ -59,7 +59,7 @@
 // const themeOptions = document.querySelector('.theme-switcher__btn');
 
 const themeMenu = document.querySelector('.theme-switcher__menu');
-const themeMainBtn = document.querySelector('.theme-switcher__main-btn');
+const themeMainBtn = document.querySelector('.switcher-main-btn');
 const themeOs = document.querySelector('.switcher-os');
 const themeLight = document.querySelector('.switcher-light');
 const themeDark = document.querySelector('.switcher-dark');
@@ -98,32 +98,32 @@ checkThemeStatus();
 
 document.documentElement.addEventListener('click', () => {
   themeMenu.classList.remove('theme-switcher__menu_active');
-  themeMainBtn.classList.remove('theme-switcher__main-btn_active');
+  themeMainBtn.classList.remove('switcher-main-btn_active');
 });
 
 themeMainBtn.addEventListener('click', (e) => {
   themeMenu.classList.toggle('theme-switcher__menu_active');
-  themeMainBtn.classList.toggle('theme-switcher__main-btn_active');
+  themeMainBtn.classList.toggle('switcher-main-btn_active');
   e.stopPropagation();
 });
 
 themeOs.addEventListener('click', () => {
   themeMenu.classList.remove('theme-switcher__menu_active');
-  themeMainBtn.classList.toggle('theme-switcher__main-btn_active');
+  themeMainBtn.classList.toggle('switcher-main-btn_active');
   localStorage.setItem('theme', 'os');
   checkThemeStatus();
 });
 
 themeLight.addEventListener('click', () => {
   themeMenu.classList.remove('theme-switcher__menu_active');
-  themeMainBtn.classList.toggle('theme-switcher__main-btn_active');
+  themeMainBtn.classList.toggle('switcher-main-btn_active');
   localStorage.setItem('theme', 'light');
   checkThemeStatus();
 });
 
 themeDark.addEventListener('click', () => {
   themeMenu.classList.remove('theme-switcher__menu_active');
-  themeMainBtn.classList.toggle('theme-switcher__main-btn_active');
+  themeMainBtn.classList.toggle('switcher-main-btn_active');
   localStorage.setItem('theme', 'dark');
   checkThemeStatus();
 });

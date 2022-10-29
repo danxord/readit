@@ -15,30 +15,27 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <div class="container">
-      <div class="header-content">
+      <div class="header__content">
         <div class="logo-theme-wrapper">
-          <a href="/posts"><img src="/svg/readit-logo.svg" alt="readit logo"></a>
+          <a href="/posts"><img src="/svg/readit-logo.svg" alt="readit logo" class="logo-theme-wrapper__logo"></a>
           <div class="theme-switcher">
-            <button aria-haspopup="menu"
-              class="theme-switcher__btn btn-tertiary theme-switcher__main-btn theme-os-icon">
-              Theme
-            </button>
+            <button aria-haspopup="menu" class="theme-switcher__btn switcher-main-btn theme-os-icon">Theme</button>
             <ul class="theme-switcher__menu">
               <li class="theme-switcher__menu-item">
-                <button class=" theme-switcher__btn btn-tertiary switcher-os theme-os-icon">OS Default</button>
+                <button class="theme-switcher__btn switcher-os theme-os-icon">OS Default</button>
               </li>
               <li class="theme-switcher__menu-item">
-                <button class="theme-switcher__btn btn-tertiary switcher-light theme-light-icon">Light</button>
+                <button class="theme-switcher__btn switcher-light theme-light-icon">Light</button>
               </li>
               <li class="theme-switcher__menu-item">
-                <button class="theme-switcher__btn btn-tertiary switcher-dark theme-dark-icon">Dark</button>
+                <button class="theme-switcher__btn switcher-dark theme-dark-icon">Dark</button>
               </li>
             </ul>
           </div>
         </div>
-        <nav class="header-navigation">
+        <nav class="header__navigation">
           <a href="#">Best</a>
           <a href="#">New</a>
           <a href="#">Subscribed</a>

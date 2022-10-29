@@ -2,9 +2,9 @@
 @use "../utils/variables" as *;
 
 .footer {
-  background-color: $white;
+  background-color: var(--bg-secondary);
   position: sticky;
-  top: 5rem;
-  padding: 24px;
-  border-radius: 8px;
+  top: rem(72);
+  padding: rem(24);
+  border-radius: rem(8);
 }
