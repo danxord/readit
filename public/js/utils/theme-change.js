@@ -108,6 +108,11 @@ themeMainBtn.addEventListener('click', (e) => {
 });
 
 themeOs.addEventListener('click', () => {
+  themeMainBtn.classList.remove('theme-light-icon', 'theme-dark-icon');
+  themeMainBtn.classList.add('theme-os-icon');
+  themeOs.classList.add('theme-active');
+  themeLight.classList.remove('theme-active');
+  themeDark.classList.remove('theme-active');
   themeMenu.classList.remove('theme-switcher__menu_active');
   themeMainBtn.classList.toggle('switcher-main-btn_active');
   localStorage.setItem('theme', 'os');
@@ -115,6 +120,11 @@ themeOs.addEventListener('click', () => {
 });
 
 themeLight.addEventListener('click', () => {
+  themeMainBtn.classList.remove('theme-os-icon', 'theme-dark-icon');
+  themeMainBtn.classList.add('theme-light-icon');
+  themeLight.classList.add('theme-active');
+  themeDark.classList.remove('theme-active');
+  themeOs.classList.remove('theme-active');
   themeMenu.classList.remove('theme-switcher__menu_active');
   themeMainBtn.classList.toggle('switcher-main-btn_active');
   localStorage.setItem('theme', 'light');
@@ -122,6 +132,11 @@ themeLight.addEventListener('click', () => {
 });
 
 themeDark.addEventListener('click', () => {
+  themeMainBtn.classList.remove('theme-os-icon', 'theme-light-icon');
+  themeMainBtn.classList.add('theme-dark-icon');
+  themeDark.classList.add('theme-active');
+  themeLight.classList.remove('theme-active');
+  themeOs.classList.remove('theme-active');
   themeMenu.classList.remove('theme-switcher__menu_active');
   themeMainBtn.classList.toggle('switcher-main-btn_active');
   localStorage.setItem('theme', 'dark');

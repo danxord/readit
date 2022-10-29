@@ -15,6 +15,21 @@
 </head>
 
 <body>
+  <script>
+    if (localStorage.getItem('theme') === null) {
+      localStorage.setItem('theme', 'os');
+    }
+    if (localStorage.getItem('theme') === 'os') {
+      document.documentElement.classList.remove('theme-light', 'theme-dark');
+      document.documentElement.classList.add('theme-os');
+    } else if (localStorage.getItem('theme') === 'light') {
+      document.documentElement.classList.remove('theme-os', 'theme-dark');
+      document.documentElement.classList.add('theme-light');
+    } else if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.remove('theme-os', 'theme-light');
+      document.documentElement.classList.add('theme-dark');
+    }
+  </script>
   <header class="header">
     <div class="container">
       <div class="header__content">
