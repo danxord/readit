@@ -16,7 +16,6 @@
         <h2 class="post-content__title"><%= post.title %></h2>
         <p class="post-content__description"><%= post.description %></p>
         <a href="<%= post.imageSrc %>"><img class="post-content__image" src="<%= post.imageSrc %>" alt="post-image">
-          <!-- <img class="post-content__image-blur" src="<%= post.imageSrc %>" alt="post-image"> -->
         </a>
         <div class="post-content__rating">
           <span><%= post.rating %></span>
@@ -25,7 +24,7 @@
           <form class="post-content__form-delete" action="/posts/<%=post._id%>?_method=DELETE" method="POST">
             <button class="post-content__btn-delete btn-secondary">Delete post</button>
           </form>
-          <a class="post-content__btn-edit btn-accent" href="/posts/<%=post._id%>/edit">Edit post</a>
+          <a class="post-content__btn-edit btn-primary" href="/posts/<%=post._id%>/edit">Edit post</a>
         </div>
       </article>
     </main>

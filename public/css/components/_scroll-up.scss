@@ -4,18 +4,18 @@
 .scroll-up {
   position: fixed;
   z-index: 1000;
-  bottom: 48px;
-  right: 48px;
-  width: 48px;
-  height: 48px;
-  border-radius: 48px;
+  bottom: rem(48);
+  right: rem(48);
+  width: rem(48);
+  height: rem(48);
+  border-radius: rem(48);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: $white;
+  background: var(--bg-tertiary);
   cursor: pointer;
-  transition: 0.2s;
-  transform: translateY(25px);
+  transition: 0.3s;
+  transform: translateY(rem(24));
   visibility: hidden;
   opacity: 0;
   -moz-user-select: -moz-none;
@@ -24,13 +24,13 @@
   -webkit-user-select: none;
   user-select: none;
   & svg {
-    transition: 0.2s;
+    transition: 0.3s;
   }
   &:hover {
-    background-color: $accent-hover;
+    background-color: var(--accent-primary-hover);
   }
-  &:hover svg {
-    fill: $white;
+  &:hover .scroll-up-icon {
+    fill: var(--icon-secondary);
   }
 }
 

@@ -5,29 +5,10 @@
   display: flex;
   align-items: center;
   &__logo {
-    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    margin-right: rem(24);
   }
-}
-
-.theme-os-icon {
-  background-image: url(/icons/theme-os.svg);
-  background-repeat: no-repeat;
-  background-position: 13px 8px;
-  background-size: 18px;
-}
-
-.theme-light-icon {
-  background-image: url(/icons/theme-light.svg);
-  background-repeat: no-repeat;
-  background-position: 11px 7px;
-  background-size: 20px;
-}
-
-.theme-dark-icon {
-  background-image: url(/icons/theme-dark.svg);
-  background-repeat: no-repeat;
-  background-position: 12px 6px;
-  background-size: 20px;
 }
 
 .theme-switcher {
@@ -36,63 +17,70 @@
     display: none;
     opacity: 0;
     position: absolute;
-    top: 36px;
+    top: rem(40);
   }
   &__menu_active {
     display: block;
     opacity: 1;
-    background-color: var(--bg-secondary);
-    box-shadow: 0px 16px 40px 0px $gray-text;
-    border-radius: 8px;
-    padding: 8px;
-    width: 156px;
+    background-color: var(--bg-tertiary);
+    box-shadow: 0 16px 40px 0 var(--shadow);
+    border-radius: rem(8);
+    padding: rem(8);
+    width: rem(160);
   }
   &__menu-item {
-    padding: 2px 4px;
+    padding: rem(2) rem(4);
   }
 }
 
 .theme-switcher__btn {
-  padding: 8px 16px 8px 36px;
+  height: rem(36);
+  padding: rem(0) rem(16);
   background-color: transparent;
   display: flex;
   align-items: center;
-  color: var(--text-primary);
+  color: var(--btn-secondary-text);
   cursor: pointer;
   width: 100%;
   font-weight: 600;
-  border-radius: 4px;
+  border-radius: rem(4);
   transition: all 0.3s ease-in-out;
   &:hover {
-    background-color: var(--bg-primary);
+    background-color: var(--btn-secondary-hover);
   }
   &:active {
-    background-color: rgba(75, 126, 255, 0.15);
+    background-color: var(--btn-secondary-active);
+  }
+  & svg {
+    margin-right: rem(6);
   }
 }
 
 .switcher-main-btn {
-  background-color: var(--bg-primary);
+  background-color: var(--btn-secondary-bg);
   &:hover {
-    background-color: rgba(75, 126, 255, 0.15);
+    background-color: var(--btn-secondary-hover);
   }
   &:active {
-    background-color: rgba(45, 96, 227, 0.2);
+    background-color: var(--btn-secondary-active);
   }
 }
 
 .switcher-main-btn_active {
-  background-color: rgba(75, 126, 255, 0.15);
-  box-shadow: 0 0 0 2px var(--accent);
+  background-color: var(--accent-primary-transparent);
+  box-shadow: 0 0 0 2px var(--accent-primary);
+  &:hover {
+    background-color: var(--accent-primary-transparent);
+  }
 }
 
 .theme-active {
   background-color: transparent;
-  box-shadow: 0 0 0 2px var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-primary);
   &:hover {
-    background-color: rgba(75, 126, 255, 0.15);
+    background-color: var(--accent-primary-transparent);
   }
   &:active {
-    background-color: rgba(45, 96, 227, 0.2);
+    background-color: var(--accent-primary-transparent-dark);
   }
 }

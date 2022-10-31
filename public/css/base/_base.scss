@@ -2,6 +2,6 @@
 @use "../utils/variables" as *;
 
 .container {
-  max-width: 1084px;
+  max-width: rem(1084);
   margin: 0 auto;
 }

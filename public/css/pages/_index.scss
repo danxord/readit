@@ -3,17 +3,17 @@
 
 .index-grid {
   display: grid;
-  grid-template-columns: 808px 256px;
-  gap: 20px;
+  grid-template-columns: rem(808) rem(256);
+  gap: rem(20);
   align-items: start;
 }
 
 .post {
   background-color: var(--bg-secondary);
-  padding: 24px;
-  border-radius: 8px;
+  padding: rem(24);
+  border-radius: rem(8);
   &:not(:last-child) {
-    margin-bottom: 16px;
+    margin-bottom: rem(16);
   }
   &__img {
     display: block;

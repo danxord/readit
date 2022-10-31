@@ -1,60 +1,40 @@
 @use "../utils/functions" as *;
 @use "../utils/variables" as *;
 
-.btn-accent {
+.btn-primary {
   text-align: center;
-  padding: 12px 0;
-  background-color: var(--accent);
-  color: var(--text-btn);
+  padding: rem(12) 0;
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
   cursor: pointer;
-  height: 48px;
+  height: rem(48);
   font-weight: 600;
-  border-radius: 4px;
+  border-radius: rem(4);
   transition: all 0.5s ease-in-out;
-  box-shadow: 0px 16px 40px 0px var(--accent-shadow);
+  box-shadow: 0px 16px 40px 0px var(--accent-primary-shadow);
   &:hover {
-    background-color: var(--accent-hover);
+    background-color: var(--btn-primary-hover);
   }
   &:active {
-    background-color: var(--accent-active);
+    background-color: var(--btn-primary-active);
     box-shadow: none;
   }
 }
 
 .btn-secondary {
-  background-color: rgba(75, 126, 255, 0.15);
-  color: var(--accent);
+  background-color: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
   cursor: pointer;
-  padding: 12px 0;
+  padding: rem(12) 0;
   text-align: center;
   font-weight: 600;
-  border-radius: 4px;
+  border-radius: rem(4);
   transition: all 0.5s ease-in-out;
   &:hover {
-    box-shadow: 0 0 0 2px var(--accent);
+    background-color: var(--btn-secondary-hover);
   }
   &:active {
-    box-shadow: none;
-    background-color: var(--accent-active);
-    color: var(--text-btn);
-  }
-}
-
-.btn-tertiary {
-  display: flex;
-  align-items: center;
-  background: none;
-  color: $black;
-  cursor: pointer;
-  width: 100%;
-  font-weight: 600;
-  border-radius: 4px;
-  transition: all 0.5s ease-in-out;
-  &:hover {
-    background-color: var(--bg-primary);
-  }
-  &:active {
-    background-color: rgba(75, 126, 255, 0.15);
+    background-color: var(--btn-secondary-active);
   }
 }
 
@@ -71,22 +51,22 @@
   }
   & a,
   svg {
-    transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   &:hover a {
-    color: var(--accent-hover);
+    color: var(--accent-primary-hover);
   }
   &:active a {
-    color: var(--accent-active);
+    color: var(--accent-primary-active);
   }
   &:hover svg {
-    fill: var(--accent-hover);
+    fill: var(--accent-primary-hover);
   }
   &:active svg {
-    fill: var(--accent-active);
+    fill: var(--accent-primary-active);
   }
 }

@@ -1,9 +1,9 @@
 const scrollUpBtn = document.querySelector('.scroll-up');
 
-// Cross-browser approach to get the scroll position relative to the top of the page
+// Кросс-браузерный подход чтобы получить позицию скролла относительно верха страницы
 const getTop = () => window.pageYOffset || document.documentElement.scrollTop;
 
-// Add and remove a class on scroll
+// Добавление и удаление класса по клику
 const onWindowScroll = function () {
   const offset = 500;
   if (getTop() > offset) {
@@ -14,7 +14,7 @@ const onWindowScroll = function () {
 };
 window.addEventListener('scroll', onWindowScroll);
 
-// Scroll to top on click
+// Скролл наверх по клику
 const scrollUp = function () {
   window.scrollTo({
     top: 0,

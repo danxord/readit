@@ -71,7 +71,7 @@ textarea {
 	line-height: 1.5;
 	resize: none;
 	margin: 0;
-	padding: 12px 12px; // отступ внутри поля textarea до текста
+	padding: rem(12) rem(12); // отступ внутри поля textarea до текста
 	overflow-y: auto; //показать скроллбар при переполнении контентом
 	display: block;
 	// vertical-align: top; аналог display: block; чтобы убрать нижний отступ в 5px от textarea

@@ -3,26 +3,26 @@
 
 .edit-post-grid {
   display: grid;
-  grid-template-columns: 808px 256px;
-  gap: 20px;
+  grid-template-columns: rem(808) rem(256);
+  gap: rem(20);
 }
 
 .edit-post-form {
   background-color: var(--bg-secondary);
-  padding: 24px;
-  border-radius: 8px;
+  padding: rem(24);
+  border-radius: rem(8);
   & h1 {
-    margin-bottom: 24px;
+    margin-bottom: rem(24);
   }
   &__list-item {
-    margin-bottom: 20px;
+    margin-bottom: rem(20);
   }
   &__list-item textarea {
-    height: 96px;
+    height: rem(96);
   }
   &__btns {
     display: flex;
-    gap: 20px;
+    gap: rem(20);
   }
   &__btn-cancel {
     width: 25%;
@@ -36,14 +36,14 @@
   background-color: transparent;
   color: var(--text-primary);
   width: 100%;
-  height: 48px;
-  border: 2px solid var(--stroke);
-  border-radius: 4px;
-  padding: 8px 12px; // отступы внутри поля до текста
-  margin-top: 8px; // отступ до лейбла
+  height: rem(48);
+  border: rem(2) solid var(--stroke);
+  border-radius: rem(4);
+  padding: rem(8) rem(12); // отступы внутри поля до текста
+  margin-top: rem(8); // отступ до лейбла
   transition: all 0.3s ease-in-out; //плавность подсветки при фокусе на элементе
   &:focus {
-    box-shadow: 0 0 0 2px var(--accent-hover);
+    box-shadow: 0 0 0 2px var(--accent-primary-hover);
   }
 }
 
@@ -52,20 +52,20 @@
   flex-direction: column;
   justify-content: center;
   background-color: var(--bg-secondary);
-  border-radius: 8px;
+  border-radius: rem(8);
   &__list {
     list-style-type: decimal;
   }
   &__list-item {
-    padding: 12px 24px 12px 0;
-    margin-left: 32px;
+    padding: rem(12) rem(24) rem(12) 0;
+    margin-left: rem(32);
   }
   &__list-item:last-child {
-    padding-bottom: 0px;
+    padding-bottom: rem(0);
   }
   &__list-item:not(:last-child) {
     border-bottom-color: var(--stroke);
     border-bottom-style: solid;
-    border-bottom-width: 1px;
+    border-bottom-width: rem(1);
   }
 }
